@@ -1,0 +1,10 @@
+{
+    "name": "hw/php-mapi-wrapper",
+    "description": "Hollywood.com PHP MAPI Wrapper",
+    "autoload": {
+        "psr-0": { "": "BC/" }
+    },
+    "require": {
+        "php": ">=5.*"
+    }
+}
