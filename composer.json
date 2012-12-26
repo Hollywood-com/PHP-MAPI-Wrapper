@@ -2,7 +2,7 @@
     "name": "hw/php-mapi-wrapper",
     "description": "Hollywood.com PHP MAPI Wrapper",
     "autoload": {
-        "psr-0": { "": "BC/" }
+        "classmap": [""]
     },
     "require": {
         "php": ">=5.3"
