@@ -67,7 +67,7 @@ class BC_MAPI
 	protected $media_delivery = 'default';
 	protected $secure = FALSE;
 	protected $show_notices = FALSE;
-	protected $timeout = 15;
+	protected $timeout = 0; // original value was 15. Not large enough for us.
 	protected $timeout_attempts = 100;
 	protected $timeout_current = 0;
 	protected $timeout_delay = 1;
@@ -1546,6 +1546,26 @@ class BC_MAPIException extends Exception
 		}
 
 		parent::__construct($error, $error_code);
+	}
+	
+	/**
+	 * Returns the timeout value
+	 * 
+	 * @return int
+	 */
+	public function getTimeout()
+	{
+		return $this->timeout;
+	}
+	
+	/**
+	 * Sets the timeout value
+	 * 
+	 * @param int [$timeout] The timeout setting
+	 */
+	public function setTimeout($timeout)
+	{
+		$this->timeout = $timeout;
 	}
 }
 
